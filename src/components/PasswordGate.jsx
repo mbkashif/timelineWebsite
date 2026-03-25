@@ -11,7 +11,7 @@ export default function PasswordGate({ onUnlock }) {
     setLoading(true);
 
     try {
-      const verifyResponse = await fetch("http://localhost:4000/verify", {
+      const verifyResponse = await fetch("https://timelinewebsite.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -27,7 +27,7 @@ export default function PasswordGate({ onUnlock }) {
         return;
       }
 
-      await fetch("http://localhost:4000/log-visit", {
+      await fetch("https://timelinewebsite.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

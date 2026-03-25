@@ -9,7 +9,12 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://timeline-website-eight.vercel.app"],
+    methods: ["GET", "POST"],
+  })
+);
 app.use(express.json());
 
 const visitsFilePath = path.join(__dirname, "visits.json");
@@ -68,6 +73,6 @@ app.get("/visits", (req, res) => {
   res.json(visits);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
 });
