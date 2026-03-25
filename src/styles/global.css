@@ -1,0 +1,105 @@
+/* Background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #1a1a2e, #0f0f1a);
+  color: white;
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  color: #ff4d6d;
+  text-shadow: 0 0 20px rgba(255, 77, 109, 0.6);
+}
+
+.intro p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* Timeline Container */
+.timeline {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+}
+
+/* Vertical glowing line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ff4d6d, transparent);
+  box-shadow: 0 0 10px #ff4d6d;
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 60px;
+  padding-left: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glowing dot */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: #ff4d6d;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #ff4d6d;
+}
+
+/* Card effect */
+.timeline-item h2 {
+  margin: 5px 0;
+}
+
+.timeline-item h3 {
+  color: #ff4d6d;
+}
+
+.timeline-item p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Hover animation */
+.timeline-item:hover {
+  transform: translateY(-5px);
+}
+
+.update-section {
+  margin-top: 80px;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 77, 109, 0.3);
+}
+
+.update-section h2 {
+  color: #ff4d6d;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 77, 109, 0.6);
+}
+
+.update-section p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.7;
+  opacity: 0.9;
+}
